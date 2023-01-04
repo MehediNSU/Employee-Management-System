@@ -1,0 +1,131 @@
+/* dashboard start */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border:1px solid red;
+    width: fit-content;
+    margin: 0px auto;
+    padding: 20px 30px; */
+}
+.add-button{
+    background: transparent;
+    background-color:beige;
+    cursor: pointer;
+}
+.add-button:hover{
+    /* background: transparent; */
+    border-color: rgb(23, 198, 52);
+    /* background-color: blue; */
+}
+
+.user-info{
+    display: flex;
+    justify-content: center;
+}
+
+th{
+    background-color:rgb(220, 239, 245);
+}
+
+.edit{
+    margin-left: 10px;
+    background-color:rgb(141, 141, 232);
+    cursor: pointer;
+}
+
+.edit:hover{
+     background: transparent;
+     border-color: blue;
+     /* background-color: blue; */
+}
+.delete{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.delete:hover{
+    border-color:rgb(240, 108, 108);
+    background-color: red;
+    /* background-color: blue; */
+}
+/* dashboard end */
+
+.test-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border:1px dotted red;
+    width: fit-content;
+    margin: 0px auto;
+    padding: 20px 30px; */
+}
+.search:hover{
+    background: transparent;
+    border-color: none;
+    /* background-color: blue; */
+}
+
+.clear{
+    background-color:rgb(240, 108, 108);
+}
+.clear:hover{
+    background: transparent;
+    border-color: red;
+    /* background-color: blue; */
+}
+.test-form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* form start */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-primary {
+    background-color: rgb(241, 124, 124);
+    cursor: pointer;
+  }
+  
+  .alert-danger {
+    background-color: red;
+  }
+  .ng-valid[required] .ng-dirty
+
+{
+  outline: 0;
+  border: 2px solid rgb(79, 217, 79);
+}
+
+input.ng-valid[required]:focus {
+  outline: 0;
+  border: 2px solid rgb(79, 217, 79);
+}
+
+input.ng-invalid.ng-dirty:focus {
+  outline: 0;
+  border: 2px solid red;
+}
+/* form end */
+.pretty{
+    background-color: #54607a;
+    background-color: rgb(142, 136, 136);
+    width: 32.3%;
+    padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    border: 1.5px solid red;
+  }
+
+  .pretty button{
+    border-radius: 5px;
+  }

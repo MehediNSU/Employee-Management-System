@@ -1,0 +1,136 @@
+<div class="pretty">
+  <!-- Add Emoployee form start-->
+  <div class="container">
+    <h2>Add Employee</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="addUser()">
+      <div class="form-group">
+        <label for="name">Name</label><br />
+        <input
+          type="text"
+          placeholder="enter name"
+          formControlName="name"
+        /><br />
+        <pre></pre>
+        <label for="email">Email</label><br />
+        <input
+          type="email"
+          placeholder="enter email"
+          formControlName="email"
+        /><br />
+        <pre></pre>
+        <label for="salary">Salary</label><br />
+        <input
+          type="number"
+          placeholder="enter salary"
+          formControlName="salary"
+        /><br />
+        <pre></pre>
+        <button
+          (click)="addEmployee()"
+          [disabled]="!loginForm.valid"
+          class="add-button"
+          title="Click to add"
+        >
+          Add
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- Add employee form end-->
+
+  <!-- Edi Emoployee form start-->
+  <div class="container">
+    <h2>Edit Employee</h2>
+    <form [formGroup]="editForm" (ngSubmit)="clearEdit()">
+      <div class="form-group">
+        <label for="name">Name</label><br />
+        <input type="text" formControlName="name" /><br />
+        <pre></pre>
+        <label for="email">Email</label><br />
+        <input type="email" formControlName="email" /><br />
+        <pre></pre>
+        <label for="salary">Salary</label><br />
+        <input type="number" formControlName="salary" /><br />
+        <pre></pre>
+        <button
+          (click)="updateEmployee()"
+          [disabled]="!editForm.valid"
+          class="add-button"
+          title="Click to update this details"
+        >
+          Update
+        </button>
+      </div>
+    </form>
+  </div>
+  <!-- Edit employee form end-->
+
+  <br />
+  <br />
+  <br />
+
+  <!-- Search form start-->
+  <form>
+    <div class="test-form">
+      <input id="search" type="text" #search />
+      <button (click)="searchEmployee(search.value)" class="search">
+        Search
+      </button>
+      <button
+        (click)="clearSearch(search.value)"
+        class="clear"
+        title="Click to clear the search history"
+      >
+        Clear
+      </button>
+    </div>
+  </form>
+  <!-- Search form end-->
+
+  <br />
+  <br />
+
+  <!-- Rendered start-->
+  <div class="user-info">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Salary</th>
+          <th scope="col">Action</th>
+        </tr>
+        <br />
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let employee of employees1">
+          <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.salary }}</td>
+            <td>
+              <button
+                class="edit"
+                (click)="editIt(employee)"
+                title="Click to edit this employee's details"
+              >
+                Edit
+              </button>
+              <button
+                class="delete"
+                (click)="deleteEmployee(employee.id)"
+                title="Click to delete this employee's details"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+          <br />
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+  <!-- Rendered end-->
+</div>
